@@ -1,0 +1,22 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:padding="12dp"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#EEEEEE"
+    android:layout_marginBottom="6dp">
+
+    <TextView
+        android:id="@+id/smsMessage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="SMS Text"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/smsStatus"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Spam / Not Spam"
+        android:textColor="#FF5722" />
+</LinearLayout>
