@@ -51,10 +51,28 @@ public class SmsAdapter extends RecyclerView.Adapter<SmsAdapter.ViewHolder> {
         SmsResult sms = smsList.get(position);
         holder.messageText.setText(sms.getMessage());
         holder.resultText.setText(sms.getResult());
+
+        String resultText = sms.getResult().toLowerCase();
+
+        if (resultText.contains("spam") && resultText.startsWith("spam")) {
+            // Spam
+            holder.resultText.setBackgroundResource(R.drawable.bg_spam);
+            holder.resultText.setTextColor(0xFFD32F2F); // Dark red
+        } else {
+            // Not spam
+            holder.resultText.setBackgroundResource(R.drawable.bg_not_spam);
+            holder.resultText.setTextColor(0xFF388E3C); // Dark green
+        }
     }
+
 
     @Override
     public int getItemCount() {
         return smsList.size();
     }
+    public void setSmsList(List<SmsResult> newList) {
+        this.smsList = newList;
+        notifyDataSetChanged();
+    }
+
 }

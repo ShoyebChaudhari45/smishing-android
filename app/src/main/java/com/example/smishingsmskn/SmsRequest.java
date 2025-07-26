@@ -1,5 +1,7 @@
 package com.example.smishingsmskn;
 
+
+
 public class SmsRequest {
     private String message;
 
@@ -11,5 +13,3 @@ public class SmsRequest {
         return message;
     }
 }
-
-

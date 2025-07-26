@@ -9,11 +9,6 @@ public class SmsResult {
         this.result = result;
     }
 
-    public String getMessage() {
-        return message;
-    }
-
-    public String getResult() {
-        return result;
-    }
+    public String getMessage() { return message; }
+    public String getResult() { return result; }
 }
